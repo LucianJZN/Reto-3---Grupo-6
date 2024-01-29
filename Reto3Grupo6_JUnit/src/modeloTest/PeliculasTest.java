@@ -12,17 +12,24 @@ public class PeliculasTest {
 	public void testEqualsObject() {
 		Peliculas pelicula1 = new Peliculas();
 		pelicula1.setIdPeliculas("1");
-		pelicula1.setTituloPeliculas("Interestellar");
+		pelicula1.setTituloPeliculas("Interstellar");
 		pelicula1.setGeneroPeliculas("Ciencia ficcion");
 		pelicula1.setDuracionPeliculas("140");
 
 		Peliculas pelicula2 = new Peliculas();
 		pelicula2.setIdPeliculas("1");
-		pelicula2.setTituloPeliculas("Interestellar");
+		pelicula2.setTituloPeliculas("Interstellar");
 		pelicula2.setGeneroPeliculas("Ciencia ficcion");
 		pelicula2.setDuracionPeliculas("140");
 
 		assertEquals(pelicula1, pelicula2);
+	}
+	
+	@Test
+	public void testNullObject() {
+		Peliculas pelicula = new Peliculas();
+		pelicula.setTituloPeliculas(null);
+		assertNull(pelicula.getTituloPeliculas());
 	}
 
 	@Test
@@ -42,15 +49,15 @@ public class PeliculasTest {
 	@Test
 	public void testGetTituloPeliculas() {
 		Peliculas pelicula = new Peliculas();
-		pelicula.setTituloPeliculas("Interestellar");
-		assertEquals("Interestellar", pelicula.getTituloPeliculas());
+		pelicula.setTituloPeliculas("Interstellar");
+		assertEquals("Interstellar", pelicula.getTituloPeliculas());
 	}
 
 	@Test
 	public void testSetTituloPeliculas() {
 		Peliculas pelicula = new Peliculas();
-		pelicula.setTituloPeliculas("Interestellar");
-		assertEquals("Interestellar", pelicula.getTituloPeliculas());
+		pelicula.setTituloPeliculas("Interstellar");
+		assertEquals("Interstellar", pelicula.getTituloPeliculas());
 	}
 
 	@Test
